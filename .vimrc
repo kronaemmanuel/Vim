@@ -16,6 +16,13 @@ let g:airline_theme = 'papercolor'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" NerdTree
+filetype plugin indent on
+map <C-n> :NERDTreeToggle<CR>
+
+" TabNine (Autocomplete plugin based on YouCompleteMe)
+set rtp+=~/.vim/bundle/tabnine
+
 " General
 set number				" Show line numbers
 set linebreak				" Break lines at word
@@ -33,6 +40,12 @@ set softtabstop=2			" Number of spaces per Tab
 syntax enable                           " Turn on syntax highlighting
 
 set showcmd                             " To show command being typed
+
+" Buffer
+set hidden                              " Enables hidden buffers which enables switching buffers without saving 
+map <C-j> :bnext<CR>
+map <C-k> :bprev<CR>
+
 
 " Advanced
 set ruler				" Show row and column ruler information
